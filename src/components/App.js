@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import SearchBar from './SearchBar'
 import VideoList from './VideoList'
 import VideoDetail from './VideoDetail'
+import Comments from './Comments'
 import useVideos from '../hooks/useVideos'
 
 const App = () => {
@@ -24,6 +25,8 @@ const App = () => {
             <div className='five wide column'>
               <VideoList videos={videos} onVideoSelect={video => setSelectedVideo(video)} />
             </div>
+
+            <Comments video={selectedVideo} />
           </div>
         </div>
       </div>
